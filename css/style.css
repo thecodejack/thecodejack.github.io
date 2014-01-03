@@ -1,0 +1,90 @@
+@font-face {
+    font-family:'StandardCTCondensed-Regular';
+    src: url('../fonts/23F344_0_0.eot');
+    src: url('../fonts/23F344_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/23F344_0_0.woff') format('woff'), url('../fonts/23F344_0_0.ttf') format('truetype');
+}
+@font-face {
+    font-family:'StandardCTCondensed-Medium';
+    src: url('../fonts/23F344_1_0.eot');
+    src: url('../fonts/23F344_1_0.eot?#iefix') format('embedded-opentype'), url('../fonts/23F344_1_0.woff') format('woff'), url('../fonts/23F344_1_0.ttf') format('truetype');
+}
+/* Put your CSS here */
+ html, body {
+    margin: 20px;
+    background: #EEEEE6 url('../img/bg.png') fixed;
+}
+h2 {
+    font-size: 100px;
+    margin-top: 0;
+    font-family:'Russo One', sans-serif;
+    text-shadow: 0px 1px 1px #000;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+.nav {
+    margin-top: 50px;
+}
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline;
+    /* ie7 fix */
+    zoom:1;
+    /* hasLayout ie7 trigger */
+}
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+body {
+    margin-top: 7%;
+}
+.nav-pills>li>a {
+    padding: 4px 8px;
+}
+.w_msg {
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: monospace, sans-serif;
+}
+.email {
+    background-color: #E4E4E4;
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+.resume_head {
+	height:190px;
+}
+
+#resume_header {
+    background: #6bacbf;
+    float: left;
+    padding: 80px 20px 20px;
+    width: 200px;
+}
+#resume_header a {
+    font-family: StandardCTCondensed-Medium;
+    font-size: 53px;
+    font-weight: bold;
+    line-height: 0.85;
+    color: white;
+    display: block;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+#for_hire {
+    background: #6bacbf;
+    border-top: 0;
+    color: white;
+    color: rgba(255, 255, 255, 0.93);
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+.resume_header_right {
+    float: right;
+}
