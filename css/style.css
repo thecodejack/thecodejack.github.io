@@ -54,16 +54,24 @@ body {
     font-style: italic;
 }
 
-
+/*****
+RESUME PAGE
+*****/
+ html.resume, body.resume {
+    margin: 0px;
+    background: #444;
+}
 .resume_head {
-	height:190px;
+	height: 200px;
+    margin: 10px 0px;
 }
 
 #resume_header {
-    background: #6bacbf;
+    background: #854747;
     float: left;
     padding: 80px 20px 20px;
-    width: 200px;
+    width: 150px;
+    margin:0px;
 }
 #resume_header a {
     font-family: StandardCTCondensed-Medium;
@@ -75,16 +83,17 @@ body {
     letter-spacing: -1px;
     text-transform: uppercase;
 }
-#for_hire {
-    background: #6bacbf;
+#resume_for_hire {
+    background: #854747;
     border-top: 0;
     color: white;
     color: rgba(255, 255, 255, 0.93);
     font-size: 15px;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     clear: both;
 }
 .resume_header_right {
-    float: right;
+    height: 150px;
+    
 }
