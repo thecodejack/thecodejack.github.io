@@ -1,0 +1,45 @@
+/* Put your CSS here */
+ html, body {
+    margin: 20px;
+    background: #EEEEE6 url('../img/bg.png') fixed;
+}
+h2 {
+    font-size: 100px;
+    margin-top: 0;
+    font-family:'Russo One', sans-serif;
+    text-shadow: 0px 1px 1px #000;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+.nav {
+    margin-top: 50px;
+}
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline;
+    /* ie7 fix */
+    zoom:1;
+    /* hasLayout ie7 trigger */
+}
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+body {
+    margin-top: 7%;
+}
+.nav-pills>li>a {
+    padding: 4px 8px;
+}
+.w_msg {
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: monospace, sans-serif;
+}
+.email {
+    background-color: #E4E4E4;
+    font-size: 18px;
+    font-style: italic;
+}
