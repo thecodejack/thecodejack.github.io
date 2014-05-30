@@ -1,74 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
+
 <head>
-<meta charset="utf-8">
-<title>Adi Srikanth</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Russo+One">
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <title>Adi Srikanth | Front End Developer | Full Stack Developer</title>
+    <meta name="description" content="Personal Website of Adi Srikanth front end developer, ui developer">
+
+    <link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
 
-  <script type="text/x-handlebars">
-  <div class="row">
-    <div class="menu" style="float:right;">
-      <a href="http://blog.adisrikanth.com">blog</a> | <a href="resume.html">resume</a> | 
+<body class="container">
+    <div class="nav row">
+        <div class="col-md-7 head_left">
+            <span style="font-size: 25px;">SRIKANTH ADI</span>
+            <span style="color: #FF8C8C;font-size: 18px;">FRONT END DEVELOPER</span>
+        </div>
+        <div class="col-md-5 head_right">
 
-      <a href="https://www.linkedin.com/profile/view?id=47591058" class="linkedin"><img src="http://blog.adisrikanth.com/wp-content/uploads/2013/08/LinkedIn-24.png" alt=""></a>
-      <a href="https://www.facebook.com/adisrikanth" class="facebook"><img src="http://blog.adisrikanth.com/wp-content/uploads/2013/08/Facebook-24.png" alt=""></a>
-      <a href="https://github.com/thecodejack" class="github"><img src="http://blog.adisrikanth.com/wp-content/uploads/2013/08/Github-24.png" alt=""></a>
-
-          </ul>
+        </div>
     </div>
-  </div>
-  <div class="row text-center">
-    <h2>SRIKANTH ADI</h2>
-  </div>
-  <div class="row text-center">
-    <ul class="nav nav-pills">
-      <li class="active home">{{#link-to 'index'}}Home{{/link-to}}</li>
-       <li class="about">{{#link-to 'about'}}About Me{{/link-to}}</li> 
-      <li class="contact">{{#link-to 'contact'}}Contact{{/link-to}}</li>
-    </ul>
-  </div>
-
-  <div class="container text-center">
-    {{outlet}}
-  </div>
-  </script>
-
-  <script type="text/x-handlebars" data-template-name="index">
-   <div class="w_msg">Hello There</div> 
-  </script>
-
-  <script type="text/x-handlebars" data-template-name="about">
-   <div class="w_msg">I am front end developer living in Hyderabad, India. I love to code in javascript. Love designing for applications as well. Follow my <a href='http://blog.adisrikanth.com'>blog</a> to know about awesome front end related stuff.
-</div> 
-  </script>
-
-  <script type="text/x-handlebars" data-template-name="contact">
-    <div class="w_msg">Please contact me by email at <span class='email'>aadisrikanth@gmail.com</span> for any technical expertise related to javascript or HTML5.</div>
-  </script>
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js"></script>
-  <script src="http://builds.emberjs.com/tags/v1.0.0/ember.min.js"></script>
-  <script src="js/app.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-44051602-1', 'adisrikanth.com');
-  ga('send', {
-  'hitType': 'pageview',
-  'page': '/index',
-  'title': 'Index Page'
-});
-
-</script>
+    <div class="myrow wrapper">
+        <div class="col-md-3 tile">
+            <div class="cover">
+                <div class="up" style="background-image: url('images/6.jpg');background-position: 40% 50%;"></div>
+                <div class="down">456</div>
+            </div>
+        </div>
+        <div class="col-md-3 tile">
+            <div class="cover">
+                <div class="up" style="background-image: url('images/2.jpg');background-position: 50% 50%;"></div>
+                <div class="down">456</div>
+            </div>
+        </div>
+        <div class="col-md-3 tile">
+            <div class="cover">
+                <div class="up" style="background-image: url('images/4.jpg');background-position: 40% 50%;"></div>
+                <div class="down">456</div>
+            </div>
+        </div>
+        <div class="col-md-3 tile">
+            <div class="cover">
+                <div class="up" style="background-image: url('images/5.png');background-position: 40% 50%;"></div>
+                <div class="down">456</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

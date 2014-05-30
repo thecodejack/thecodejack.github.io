@@ -1,45 +1,167 @@
-/* Put your CSS here */
- html, body {
-    margin: 20px;
-    background: #EEEEE6 url('../img/bg.png') fixed;
+@font-face {
+    font-family:"CourierCode Bold";
+    src: url("fonts/CourierCode-Bold.ttf") format("truetype");
 }
-h2 {
-    font-size: 100px;
-    margin-top: 0;
-    font-family:'Russo One', sans-serif;
-    text-shadow: 0px 1px 1px #000;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 0px;
-    font-weight: bold;
-}
-.nav {
-    margin-top: 50px;
-}
-.nav-tabs > li, .nav-pills > li {
-    float:none;
-    display:inline-block;
-    *display:inline;
-    /* ie7 fix */
-    zoom:1;
-    /* hasLayout ie7 trigger */
-}
-.nav-tabs, .nav-pills {
-    text-align:center;
+html, body {
+    height: 100%;
 }
 body {
-    margin-top: 7%;
+    background-color: #34343F;
+    overflow: hidden;
 }
-.nav-pills>li>a {
-    padding: 4px 8px;
+.container {
+    height: 100%;
 }
-.w_msg {
-    margin-top: 10px;
-    font-size: 20px;
-    font-family: monospace, sans-serif;
+.nav {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #615454;
+    font-family:'Days One', sans-serif;
 }
-.email {
-    background-color: #E4E4E4;
-    font-size: 18px;
-    font-style: italic;
+.head_left {
+    color: #fff;
+    font-weight: bold;
+}
+.wrapper {
+    height: 90%;
+}
+.tile {
+    height: 100%;
+}
+.myrow {
+    display: inline-block;
+    width: 100%;
+    -webkit-perspective: 3000px;
+    -ms-perspective: 3000px;
+    perspective: 3000px;
+}
+.tile:active .cover,.tile:focus .cover,.tile:hover .cover {
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg)
+}
+.cover {
+    -webkit-transition: .6s;
+    transition: .6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.down, .up {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.up {
+    z-index: 2;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tile.animate-helix {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-animation: helix .8s ease-in-out forwards;
+    animation: helix .8s ease-in-out forwards
+}
+
+.tile.animate-helix-off {
+    opacity: 1
+}
+
+@-webkit-keyframes helix {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        opacity: 0
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg)
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg)
+    }
+
+    100% {
+        -webkit-transform: rotateY(0deg);
+        opacity: 1
+    }
+}
+
+@keyframes helix {
+    0% {
+        -ms-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0
+    }
+
+    40% {
+        -ms-transform: perspective(400px) rotateY(-10deg);
+        transform: perspective(400px) rotateY(-10deg)
+    }
+
+    70% {
+        -ms-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg)
+    }
+
+    100% {
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        opacity: 1
+    }
+}
+
+.down,.up {
+    display: block
+}
+
+.cover {
+    -webkit-transition: .6s;
+    transition: .6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.down,.up {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.up {
+    z-index: 2;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.down {
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    background: #1D1A21;
+    color: #FFF
 }
