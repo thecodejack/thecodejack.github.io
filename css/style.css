@@ -67,8 +67,8 @@ body {
     z-index: 2;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    background-size: 100%;
+    background-color: #FFF;
 }
 .tile_lbl {
     font-family:'Days One', sans-serif;
