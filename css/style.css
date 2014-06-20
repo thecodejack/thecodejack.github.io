@@ -6,7 +6,7 @@ html, body {
     height: 100%;
 }
 body {
-    background-color: #34343F;
+    background-color: #32313E; /*#34343F;*/
     overflow: hidden;
 }
 .container {
@@ -62,13 +62,14 @@ body {
     width: 100%;
     height: 100%;
     font-size: 16px;
+    display: block
 }
 .up {
     z-index: 2;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-color: #FFF;
+    background-color: #32313E;
 }
 .tile_lbl {
     font-family:'Days One', sans-serif;
@@ -78,7 +79,7 @@ body {
     font-size: 25px;
     background-color: #000;
     width: 100%;
-    bottom: 50px;
+    bottom: 80px;
 }
 .tile.animate-helix {
     opacity: 0;
@@ -127,9 +128,6 @@ body {
         opacity: 1
     }
 }
-.down, .up {
-    display: block
-}
 .cover {
     -webkit-transition: .6s;
     transition: .6s;
@@ -149,12 +147,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%
-}
-.up {
-    z-index: 2;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover
 }
 .down {
     -webkit-transform: rotateY(-180deg);
