@@ -104,6 +104,26 @@ a {
 	text-align: left;
 }
 
+.social_icons .fa {
+    color: #FF8C8C;
+}
+
+.social_icons {
+    display: block;
+    padding: 0;
+}
+.social_icons li {
+    display: inline-block;
+}
+
+.social_icons li a {
+    text-decoration: none;
+}
+
+/*.repos li {
+    display: block;
+}*/
+
 .tile:active .tile_lbl, .tile:focus .tile_lbl, .tile:hover .tile_lbl, .tile.click .tile_lbl {
     top: 10%;
     background-color: #FF8C8C;
@@ -117,3 +137,5 @@ a {
     width: 100%;
     text-align: center;
 }
+
+/**Loading Spinner**/
