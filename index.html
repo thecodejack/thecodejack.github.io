@@ -84,7 +84,7 @@
                 </div>
                 <div class="down">
                     <p>If you are in any need of technical expertise or consulting mainly in 
-                    Javascript MV* frameworks like EmberJS, BackboneJS or AngularJS, Drop a mail to aadisrikanth@gmail.com.</p>
+                    Javascript MV* frameworks like EmberJS, BackboneJS or AngularJS, drop a mail to <span id="myemail" onClick="ClipBoard();">aadisrikanth@gmail.com</span>.</p>
                     <p>I always welcome discussions about football in my free time. Can contact me in any of social web.</p>
                     <br />
                     <ul class="social_icons">
@@ -99,6 +99,15 @@
     <div class="row footer">
         Design &amp; Developed by Srikanth Adi &copy; 2014 | Thanks to <a href="http://wordificator.com">wordificator.com</a> for generating awesome letter clouds
     </div>
+    <textarea id="holdtext" style="display:none;">
+    </textarea>
+    <script>
+        function ClipBoard() {
+            holdtext.innerText = myemail.innerText;
+            Copied = holdtext.createTextRange();
+            Copied.execCommand("Copy");
+        }
+    </script>
 </body>
 
 </html>
