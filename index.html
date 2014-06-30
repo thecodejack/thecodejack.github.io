@@ -10,11 +10,12 @@
     <script type="text/javascript" src="js/modernizer.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/hint.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body class="container">
-    <div class="nav row">
+    <div class="mycontent nav row">
         <div class="col-md-7 head_left">
             <span style="font-size: 28px;">SRIKANTH ADI</span>
             <span style="color: #FF8C8C;font-size: 18px;">FRONT END DEVELOPER</span>
@@ -23,7 +24,7 @@
             
         </div>
     </div>
-    <div class="myrow wrapper">
+    <div class="mycontent myrow wrapper">
         <div class="col-md-4 tile">
             <div class="tile_lbl">
                 ABOUT ME
@@ -84,7 +85,8 @@
                 </div>
                 <div class="down">
                     <p>If you are in any need of technical expertise or consulting mainly in 
-                    Javascript MV* frameworks like EmberJS, BackboneJS or AngularJS, drop a mail to <span id="myemail" onClick="ClipBoard();">aadisrikanth@gmail.com</span>.</p>
+                    Javascript MV* frameworks like EmberJS, BackboneJS or AngularJS, drop a mail to 
+                    <span id="myemail" class="hint--top  hint--info" data-hint="Right click to select" onmousedown="selectText('myemail')">aadisrikanth@gmail.com</span>.</p>
                     <p>I always welcome discussions about football in my free time. Can contact me in any of social web.</p>
                     <br />
                     <ul class="social_icons">
@@ -96,17 +98,37 @@
             </div>
         </div>
     </div>
-    <div class="row footer">
+    <div class="holder">
+      <div class="bar left"></div>
+      <div class="bar top"></div>
+      <div class="bar right"></div>
+      <div class="bar bottom"></div>
+      <div class="text">Loading..</div>
+    </div>
+    <div class="mycontent row footer">
         Design &amp; Developed by Srikanth Adi &copy; 2014 | Thanks to <a href="http://wordificator.com">wordificator.com</a> for generating awesome letter clouds
     </div>
+   
     <textarea id="holdtext" style="display:none;">
     </textarea>
-    <script>
-        function ClipBoard() {
-            holdtext.innerText = myemail.innerText;
-            Copied = holdtext.createTextRange();
-            Copied.execCommand("Copy");
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        function selectText(containerid) {
+            if (document.selection) {
+                var range = document.body.createTextRange();
+                range.moveToElementText(document.getElementById(containerid));
+                range.select();
+            } else if (window.getSelection) {
+                var range = document.createRange();
+                range.selectNode(document.getElementById(containerid));
+                window.getSelection().addRange(range);
+            }
         }
+        $('.mycontent').hide();
+        $(window).load(function(e){
+            $('.mycontent').fadeIn();
+            $('.holder').fadeOut();
+        });
     </script>
 </body>
 
