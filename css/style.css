@@ -142,6 +142,27 @@ a {
     font-style: italic;
 }
 
+.no-csstransforms3d .myrow > div {
+    display:none !important;
+}
+
+.comp_msg {
+    position: absolute;
+    color: red;
+    display: none;
+    top: 12%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.no-csstransforms3d .comp_msg {
+    display: block;
+}
+
+.no-cssreflections .comp_msg {
+    display:block;
+}
+
 /**Loading Spinner**/
 
 .holder{
