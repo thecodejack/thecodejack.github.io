@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Srikanth Adi -- front end developer -- @thecodejack
 
 # THANKS
 
-    <name>
+    wordificator.com
 
 # TECHNOLOGY COLOPHON
 
