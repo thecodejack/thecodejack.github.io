@@ -159,7 +159,7 @@ a {
     display: block;
 }
 
-.no-cssreflections .comp_msg {
+.no-flexbox .comp_msg {
     display:block;
 }
 
