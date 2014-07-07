@@ -42,6 +42,11 @@ body {
     -ms-perspective: 3000px;
     perspective: 3000px;
 }
+
+.mycontent {
+    display:none;
+}
+
 .tile:active .cover, .tile:focus .cover, .tile:hover .cover, .tile.click .cover {
     -webkit-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
