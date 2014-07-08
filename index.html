@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="mycontent myrow wrapper">
-        <div class="col-md-4 tile">
+        <div class="col-md-4 tile click">
             <div class="tile_lbl">
                 ABOUT ME
             </div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 tile">
+        <div class="col-md-4 tile click">
             <div class="tile_lbl">
                 WORK
             </div>
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 tile">
+        <div class="col-md-4 tile click">
             <div class="tile_lbl">
                 CONTACT
             </div>
@@ -103,12 +103,14 @@
     <div class="comp_msg row">
         Currently My Site is not supported in your browser. I have tested my site successfully in Chrome20+, Firefox4+, Safari6+ pc browsers.
     </div>
-    <div class="holder">
-      <div class="bar left"></div>
-      <div class="bar top"></div>
-      <div class="bar right"></div>
-      <div class="bar bottom"></div>
-      <div class="text">Loading..</div>
+    <div class="loading-div">
+        <div class="holder">
+          <div class="bar left"></div>
+          <div class="bar top"></div>
+          <div class="bar right"></div>
+          <div class="bar bottom"></div>
+          <div class="text">Loading..</div>
+        </div>
     </div>
     <div class="mycontent row footer">
         Design &amp; Developed by Srikanth Adi &copy; 2014 | Thanks to <a href="http://wordificator.com">wordificator.com</a> for generating awesome letter clouds
@@ -130,8 +132,8 @@
             }
         }
         $(window).load(function(e){
-            $('.holder').fadeOut(1000);
-            $('.mycontent').fadeIn(1000);
+            $('.loading-div').fadeOut(1000);
+            setTimeout(function(){$('.tile').removeClass('click');}, 200);
         });
     </script>
     <script>
