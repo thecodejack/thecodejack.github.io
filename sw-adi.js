@@ -10,10 +10,10 @@ self.addEventListener('install', function(event) {
     // long install takes, and if it failed
     event.waitUntil(
         // We open a cache…
-        caches.open('adi-sw-v5').then(function(cache) {
+        caches.open('adi-sw-v6').then(function(cache) {
             // And add resources to it
             return cache.addAll([
-                //'./',
+                './',
                 'js/modernizer.js',
                 'css/bootstrap.css',
                 'css/hint.css',
