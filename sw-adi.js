@@ -10,7 +10,7 @@ self.addEventListener('install', function(event) {
     // long install takes, and if it failed
     event.waitUntil(
         // We open a cache…
-        caches.open('adi-sw-v6').then(function(cache) {
+        caches.open('adi-sw-v7').then(function(cache) {
             // And add resources to it
             return cache.addAll([
                 './',
@@ -25,10 +25,10 @@ self.addEventListener('install', function(event) {
                 // Cache resources can be from other origins.
                 // This is a no-cors request, meaning it doesn't need
                 // CORS headers to be stored in the cache
-                new Request('http://fonts.googleapis.com/css?family=Days+One', {
+                new Request('//fonts.googleapis.com/css?family=Days+One', {
                     mode: 'no-cors'
                 }),
-                new Request('http://fonts.googleapis.com/css?family=Merriweather', {
+                new Request('//fonts.googleapis.com/css?family=Merriweather', {
                     mode: 'no-cors'
                 }),
                 new Request('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', {
