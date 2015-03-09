@@ -57,6 +57,8 @@ self.addEventListener('fetch', function(event) {
             // it's null, and we'll pass the request to
             // fetch, which will use the network.
             return response || fetch(event.request);
+        }).catch(function() {
+            return caches.match('error.html');
         })
     );
 });
