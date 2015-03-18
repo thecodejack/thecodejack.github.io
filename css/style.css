@@ -124,11 +124,13 @@ a {
 }
 
 .social_icons {
-    display: block;
+    display: flex;
+    flex-direction: row;
     padding: 0;
+    justify-content: space-around;
 }
 .social_icons li {
-    display: inline-block;
+    display: block;
 }
 
 .social_icons li a {
