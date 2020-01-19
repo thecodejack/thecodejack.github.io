@@ -1,46 +1,81 @@
+<script>
+  import IconBar from "./../components/iconbar.svelte";
+</script>
+
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+  .home_container_inner {
+    grid-template-areas: "title picture";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+  }
+  .title {
+    margin: auto;
+  }
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+  h3 {
+    font-size: 20px;
+  }
 
-	figure {
-		margin: 0 0 1em 0;
-	}
+  .picture {
+    grid-area: picture;
+    margin-left: 20px;
+  }
+  .picture__border {
+    width: 100%;
+    background: #f9f9f9;
+    padding: 20px 10px 50px;
+    height: 95%;
+    transform: rotate(5deg);
+    position: relative;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  }
+  .picture__border:after {
+    content: "";
+    width: 55%;
+    height: 20px;
+    top: -10px;
+    z-index: 5;
+    left: 25%;
+    transform: rotate(-2deg);
+    position: absolute;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background: rgba(220, 220, 220, 0.4);
+  }
+  .picture__border img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .picture__border figcaption {
+    margin: 10px 0;
+    text-align: center;
+    display: block;
+    font: 14px/1 "Gochi Hand", cursive;
+    color: #f4442e;
+  }
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  .picture__border {
+    padding: 20px 10px 10px;
+  }
 </style>
 
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
+<div class="container_inner home_container_inner">
+  <div class="title">
+    <h3>it's</h3>
+    <h1>Srikanth Adi</h1>
+  </div>
+  <div class="picture">
+    <div class="picture__border">
+      <img alt="Srikanth Adi" src="adi.jpg" />
+      <figcaption>
+        Frontend Engineer
+        <br />
+        Javascript Develeper
+        <br />
+        Tech Evangelist
+      </figcaption>
+    </div>
+  </div>
+</div>
 
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<IconBar />

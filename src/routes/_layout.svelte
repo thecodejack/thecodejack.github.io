@@ -1,22 +1,34 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+  import Nav from "../components/Nav.svelte";
 
-	export let segment;
+  export let segment;
 </script>
 
 <style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+  .main-content {
+    flex: 1;
+    display: flex;
+  }
+
+  @media screen and (max-width: 768px) {
+    .main-content {
+      padding: 1em;
+    }
+  }
 </style>
 
-<Nav {segment}/>
+<svelte:head>
+  <title>Srikanth Adi | Frontend Engineer | Tech Evangelist | Mentor</title>
+</svelte:head>
 
-<main>
-	<slot></slot>
-</main>
+<Nav {segment} />
+
+<div class="main-content">
+  <div class="notebook">
+    <slot />
+  </div>
+</div>
+<footer>
+  Design inspired from this
+  <a href="https://codepen.io/oliviale/pen/aPwaXm">Codepen</a>
+</footer>

@@ -1,36 +1,232 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
 body {
-	margin: 0;
-	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-	color: #333;
+  background: #222;
+  font-family: "Gochi Hand", sans-serif;
+  color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
-	font-weight: 400;
-	line-height: 1.2;
+#sapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-	font-size: 2em;
+footer {
+  text-align: center;
+  width: 100%;
+  color: #ccc;
 }
 
-a {
-	color: inherit;
+footer a {
+  color: #7f7f7f;
 }
 
-code {
-	font-family: menlo, inconsolata, monospace;
-	font-size: calc(1em - 2px);
-	color: #555;
-	background-color: #f0f0f0;
-	padding: 0.2em 0.4em;
-	border-radius: 2px;
+footer a:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
-@media (min-width: 400px) {
-	body {
-		font-size: 16px;
-	}
+.notebook {
+  max-width: 800px;
+  min-width: 550px;
+  min-height: 570px;
+  margin: auto;
+  border-radius: 16px;
+  background: #cc4b48;
+  padding: 2px 4px 2.5px;
 }
+.container_inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #fbfae8 15px, transparent 1%) center,
+    linear-gradient(#fbfae8 15px, transparent 1%) center, #ccc;
+  background-size: 16px 16px;
+  display: grid;
+  padding: 30px 20px 25px;
+  grid-template-areas: "title expenses picture" "days expenses picture" "days expenses picture" "days goals quote" "notes tracker tracker";
+  grid-template-columns: 50% 30% 20%;
+  grid-template-rows: 18% auto auto 30% 25%;
+}
+.container_inner:after {
+  content: "";
+  width: 100px;
+  height: 100%;
+  top: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    transparent 10%,
+    rgba(153, 153, 153, 0.05) 50%,
+    rgba(153, 153, 153, 0.4) 51%,
+    rgba(153, 153, 153, 0.15) 51.5%,
+    transparent 90%
+  );
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+}
+.title h1 {
+  font: 50px/1 "Lobster", cursive;
+  text-shadow: 2px 1px 0 #fbfae8, 5px 4px 0 coral;
+  margin: 0;
+}
+.title h3 {
+  font: 13px/1.2 "Rock Salt", cursive;
+  margin: 8px;
+}
+
+.days {
+  grid-area: days;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 15px;
+  margin-right: 22px;
+}
+.days__item {
+  border: 2px solid #111;
+  position: relative;
+}
+.days__item:nth-child(1) {
+  box-shadow: 3px 3px 0 0 rgba(208, 91, 88, 0.4);
+}
+.days__item:nth-child(2) {
+  box-shadow: 3px 3px 0 0 rgba(244, 68, 46, 0.5);
+}
+.days__item:nth-child(3) {
+  box-shadow: 3px 3px 0 0 rgba(239, 184, 186, 0.6);
+}
+.days__item:nth-child(4) {
+  box-shadow: 3px 3px 0 0 rgba(204, 75, 72, 0.7);
+}
+.days__item:nth-child(5) {
+  box-shadow: 3px 3px 0 0 rgba(231, 149, 152, 0.7);
+}
+.days__item:nth-child(6) {
+  box-shadow: 3px 3px 0 0 rgba(228, 87, 46, 0.5);
+}
+.days__day {
+  padding: 5px 5px 2px;
+  font: 14px/1.5 "Special Elite", cursive;
+  border-bottom: 2px solid #111;
+}
+.days__list {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 0.9;
+}
+.days p {
+  padding-left: 8px;
+  position: relative;
+  margin: 5px 0;
+}
+.days p:after {
+  content: "-";
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+.days .highlighted {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 8px;
+  left: 0;
+  text-align: center;
+}
+.days .highlighted .text {
+  margin-top: 5px;
+  position: relative;
+}
+.days .highlighted .text span {
+  position: relative;
+  z-index: 2;
+}
+.days .highlighted .text:after {
+  content: "";
+  background: rgba(239, 184, 186, 0.3);
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  left: 2px;
+  top: 0;
+  z-index: 1;
+  transform: rotate(-3deg);
+}
+
+.notes {
+  grid-area: notes;
+  border: 2px solid #111;
+  border-width: 0 2px 2px;
+  margin: 35px 20px 0 0;
+  position: relative;
+}
+.notes span {
+  display: block;
+  margin: -25px 22px;
+  font: 32px "Lobster", cursive;
+  text-shadow: 2px 1px 0 #fbfae8, 5px 4px 0 coral;
+}
+.notes span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #111;
+  background: linear-gradient(
+    to right,
+    #111 15px,
+    transparent 15px,
+    transparent 95px,
+    #111 95px
+  );
+}
+.notes__list {
+  margin-top: 24px;
+  padding: 10px;
+  line-height: 1.2;
+}
+
+/* Responsive here
+  @media screen and (max-width: 768px) {
+	  .container_inner {
+		  grid-template-columns: 40% 25% 35%;
+		  grid-template-rows: auto;
+		  grid-template-areas: 
+			  "title title title" 
+			  "days days days" 
+			  "notes notes notes" 
+			  "expenses expenses expenses"
+			  "goals quote picture"
+			  "tracker tracker picture";
+		  > div {
+			  margin: 30px 20px;
+		  }
+		  &:after {
+			  width: 100%;
+			  height: 100px;
+			  bottom: 0;
+			  background: linear-gradient(
+				  to bottom,
+				  transparent 10%,
+				  rgba(153, 153, 153, 0.05) 50%,
+				  rgba(153, 153, 153, 0.4) 51%,
+				  rgba(153, 153, 153, 0.15) 51.5%,
+				  transparent 90%
+			  );
+		  }
+	  }
+  }
+  */
