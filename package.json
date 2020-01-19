@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "adi-site",
+  "description": "personal website of srikanth adi",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

@@ -57,6 +57,15 @@
   .picture__border {
     padding: 20px 10px 10px;
   }
+
+  @media screen and (max-width: 600px) {
+    .container_inner {
+      display: block;
+    }
+    .picture {
+      margin-top: 25px;
+    }
+  }
 </style>
 
 <div class="container_inner home_container_inner">

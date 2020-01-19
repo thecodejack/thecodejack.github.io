@@ -76,6 +76,20 @@
     font: 19px "Gochi Hand", cursive;
     margin-left: 10px;
   }
+
+  @media screen and (max-width: 600px) {
+    .container_inner {
+      display: block;
+    }
+
+    .skills {
+      margin: 83px 0 0 0;
+    }
+
+    .notes {
+      margin: 40px 20px 0 0;
+    }
+  }
 </style>
 
 <div class="container_inner about_container_inner">
@@ -132,6 +146,11 @@
   <div class="skills">
     <span>Experianced</span>
     <span>Skills</span>
+    <img
+      src="darts.svg"
+      width="120"
+      alt="skills"
+      style=" position: absolute; right: 2vw; " />
     <div class="skills__inner">
       <div class="skills__list">
         <div class="skills__item">
