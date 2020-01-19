@@ -1,6 +1,0 @@
-# robotstxt.org/
-
-User-agent: *
-
-Disallow: /resume.html
-Disallow: /resume2.html
