@@ -47,6 +47,7 @@
     text-decoration: none;
     padding: 0.5em;
     display: block;
+    color: #333;
   }
 
   .logo {

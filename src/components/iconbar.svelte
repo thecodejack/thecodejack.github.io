@@ -3,7 +3,7 @@
   a:hover {
     color: #000;
     text-decoration: none;
-    padding: 5px;
+    padding: 5px 10px;
   }
 
   .socialbtns,
@@ -65,25 +65,25 @@
       <a
         href="https://twitter.com/thecodejack"
         target="_blank"
-        class="fa fa-lg fa-twitter" />
+        class="fa fa-2x fa-twitter" />
     </li>
     <li>
       <a
         href="https://github.com/thecodejack"
         target="_blank"
-        class="fa fa-lg fa-github" />
+        class="fa fa-2x fa-github" />
     </li>
     <li>
       <a
         href="https://www.linkedin.com/in/adisrikanth"
         target="_blank"
-        class="fa fa-lg fa-linkedin" />
+        class="fa fa-2x fa-linkedin" />
     </li>
     <li>
       <a
         href="https://stackoverflow.com/users/1184902/thecodejack"
         target="_blank"
-        class="fa fa-lg fa-stack-overflow" />
+        class="fa fa-2x fa-stack-overflow" />
     </li>
   </ul>
 </div>
