@@ -171,7 +171,7 @@
                 <li>AngularJS</li>
                 <li>EmberJS</li>
                 <li>SvelteJS</li>
-                <li>C#</li>
+                <li>Java Spring</li>
                 <li>ASP.NET</li>
               </ul>
             </div>
