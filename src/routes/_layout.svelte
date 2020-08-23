@@ -21,10 +21,9 @@
   <title>Srikanth Adi | Frontend Engineer | Tech Evangelist | Mentor</title>
 </svelte:head>
 
-<Nav {segment} />
-
 <div class="main-content">
   <div class="notebook">
+    <Nav {segment} />
     <slot />
   </div>
 </div>

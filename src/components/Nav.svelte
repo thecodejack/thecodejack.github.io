@@ -9,6 +9,8 @@
     padding: 0 1em;
     background: #fbfae8;
     flex: 0;
+    margin-top: 3px;
+    border-radius: 16px 16px 0 0;
   }
 
   ul {
