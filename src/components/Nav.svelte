@@ -1,5 +1,5 @@
 <script>
-  export let segment;
+  import { page } from '$app/stores';
 </script>
 
 <style>
@@ -64,10 +64,10 @@
       <img class="logo" src="logo.png" alt="logo" />
     </li>
     <li>
-      <a class:selected={segment === undefined} href=".">home</a>
+      <a class:selected={$page.path === '/'} href=".">home</a>
     </li>
     <li>
-      <a rel="prefetch" class:selected={segment === 'about'} href="about">
+      <a rel="prefetch" class:selected={$page.path === '/about'} href="about">
         about
       </a>
     </li>

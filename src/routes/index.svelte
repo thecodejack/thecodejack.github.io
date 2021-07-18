@@ -1,5 +1,5 @@
 <script>
-  import IconBar from "./../components/iconbar.svelte";
+  import IconBar from "../components/iconbar.svelte";
 </script>
 
 <style>
@@ -76,6 +76,7 @@
   <div class="picture">
     <div class="picture__border">
       <img alt="Srikanth Adi" src="adi.jpg" />
+      <!-- svelte-ignore a11y-structure -->
       <figcaption>
         Frontend Engineer
         <br />
